@@ -7,10 +7,14 @@ function conexion()
     } catch(PDOException $e){
         echo "Error: ".$e->getMessage();
     }
+/*   
+
+    hacer consultas
+
     $static=$conexion->prepare('select * from usuarios');
     $static->execute();
-    $resultado=$static->fetchall();
-    print_r($resultado);
+    $resultado=$static->fetchall(); */
+
 }
 
 conexion();
