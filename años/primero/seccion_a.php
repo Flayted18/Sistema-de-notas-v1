@@ -1,5 +1,13 @@
 <?php 
 session_start();
+require '../../conexion.php';
+
+$static=conexion()->prepare('select * from alumnos order by cedula asc');
+    $static->execute();
+    $resultado=$static->fetchall();
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -204,15 +212,21 @@ session_start();
                           <th>tercero lapto</th>
                           <th>Nota Final</th>
                         </thead>
-                        <tbody>   
-                          <th>1</th>
-                          <th>27.919.047</th>
-                          <th>Manuel Puente</th>
-                          <th>18</th>
-                          <th>15</th>
-                          <th>20</th>
-                          <th>17.66</th>                         
-                        </tbody>
+                        <?php 
+                        foreach ($resultado as $tabla ) {
+                          echo '<tbody>';
+                          echo  '<th>'.$tabla['id'].'</th>';
+                          echo  '<th>'.$tabla['Cedula'].'</th>';
+                          echo  '<th>'.$tabla['Nombre'].'</th>';
+                          echo  '<th>'.$tabla['Nota1'].'</th>';
+                          echo  '<th>'.$tabla['Nota2'].'</th>';
+                          echo  '<th>'.$tabla['Nota3'].'</th>';
+                          echo  '<th>'.$final=($tabla['Nota3']+$tabla['Nota2']+$tabla['Nota1'])/3 .'</th>';
+                          echo '</tbody>';
+                        }
+
+                        ?>
+                       
                         <tfoot>
                           <th>NºLista</th>
                           <th>C.I</th>
