@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ITVentas | www.incanatoit.com</title>
+    <title>Notas | U.E Jose Enrique Arias</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="datatables/responsive.dataTables.min.css">
 
     <link rel="stylesheet" href="css/_all-skins.min.css">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="shortcut icon" href="img/favicon.ico">
+<!--     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.ico"> -->
 
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
