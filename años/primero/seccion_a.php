@@ -204,7 +204,6 @@ $static=conexion()->prepare('select * from alumnos order by cedula asc');
                     <div class="panel-body table-responsive" style="height: 400px;" id="listadoregistros">
                       <table id="tbllistado" class="table table-border table-striped table-bordered table-condensed table-hover">
                         <thead>
-                          <th>NºLista</th>
                           <th>C.I</th>
                           <th>Nombre</th>
                           <th>Primer lapto</th>
@@ -215,7 +214,6 @@ $static=conexion()->prepare('select * from alumnos order by cedula asc');
                         <?php 
                         foreach ($resultado as $tabla ) {
                           echo '<tbody>';
-                          echo  '<th>'.$tabla['id'].'</th>';
                           echo  '<th>'.$tabla['Cedula'].'</th>';
                           echo  '<th>'.$tabla['Nombre'].'</th>';
                           echo  '<th>'.$tabla['Nota1'].'</th>';
@@ -228,7 +226,6 @@ $static=conexion()->prepare('select * from alumnos order by cedula asc');
                         ?>
                        
                         <tfoot>
-                          <th>NºLista</th>
                           <th>C.I</th>
                           <th>Nombre</th>
                           <th>Primer lapto</th>
