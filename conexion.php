@@ -14,7 +14,7 @@ function conexion()
     $static=$conexion->prepare('select * from usuarios');
     $static->execute();
     $resultado=$static->fetchall(); */
-
+    return $conexion;
 }
 
 conexion();

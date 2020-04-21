@@ -162,6 +162,11 @@
                 <small class="label pull-right bg-yellow">IT</small>
               </a>
             </li>
+            <li>
+              <a href="cerrar_sesion.php">
+                <i class="faa fas-door"></i> <span>Cerrar Sesion</span>
+              </a>
+            </li>
                         
           </ul>
         </section>
