@@ -3,7 +3,7 @@ require 'header.php';
 ?>
 
  
-
+ 
 <!--Contenido-->
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
@@ -30,7 +30,7 @@ require 'header.php';
                           <option value="c">Seccion C</option>
                           <option value="d">Seccion D</option>
                           <option value="f">Seccion F</option>
-                          </select></th>
+                          </select></th> 
                         </thead>  
                         <thead>
                           
