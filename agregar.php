@@ -52,14 +52,6 @@ require 'header.php';
                           <tbody>
                           
                             
-                          <th><label for="">NºLista:</label></th>
-
-                          <th><input type="number" placeholder="Numero de lista"></th>
-                        </tbody>
-
-                          <tbody>
-                          
-                            
                             <th><label for="">Nombre:</label></th>
 
                             <th><input type="text" placeholder="Nombre"></th>
