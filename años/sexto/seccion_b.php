@@ -1,5 +1,16 @@
 <?php 
 session_start();
+if (isset($_SESSION['usuario'])) {
+    require '../../seccion_b.php';
+
+}else{
+    header('location: ../../login.php');
+}
+require '../../conexion.php';
+
+$static=conexion()->prepare('select * from alumnos order by cedula asc');
+    $static->execute();
+    $resultado=$static->fetchall();
 ?>
 
 <!DOCTYPE html>
@@ -196,12 +207,11 @@ session_start();
                     <div class="panel-body table-responsive" style="height: 400px;" id="listadoregistros">
                       <table id="tbllistado" class="table table-border table-striped table-bordered table-condensed table-hover">
                         <thead>
-                          <th>NºLista</th>
                           <th>C.I</th>
                           <th>Nombre</th>
-                          <th>Primer lapto</th>
-                          <th>segundo lapto</th>
-                          <th>tercero lapto</th>
+                          <th>Primer Lapso</th>
+                          <th>Segundo Lapso</th>
+                          <th>Tercer Lapso</th>
                           <th>Nota Final</th>
                         </thead>
                         <tbody>   
@@ -214,12 +224,11 @@ session_start();
                           <th>17.66</th>                         
                         </tbody>
                         <tfoot>
-                          <th>NºLista</th>
                           <th>C.I</th>
                           <th>Nombre</th>
-                          <th>Primer lapto</th>
-                          <th>segundo lapto</th>
-                          <th>tercero lapto</th>
+                          <th>Primer Lapso</th>
+                          <th>Segundo Lapso</th>
+                          <th>Tercer Lapso</th>
                           <th>Nota Final</th>
                         </tfoot>
                       </table>

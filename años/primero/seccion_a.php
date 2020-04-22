@@ -1,13 +1,16 @@
 <?php 
 session_start();
+if (isset($_SESSION['usuario'])) {
+    require '../../seccion_a.php';
+
+}else{
+    header('location: ../../login.php');
+}
 require '../../conexion.php';
 
 $static=conexion()->prepare('select * from alumnos order by cedula asc');
     $static->execute();
     $resultado=$static->fetchall();
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -206,9 +209,9 @@ $static=conexion()->prepare('select * from alumnos order by cedula asc');
                         <thead>
                           <th>C.I</th>
                           <th>Nombre</th>
-                          <th>Primer lapto</th>
-                          <th>segundo lapto</th>
-                          <th>tercero lapto</th>
+                          <th>Primer Lapso</th>
+                          <th>Segundo Lapso</th>
+                          <th>Tercer Lapso</th>
                           <th>Nota Final</th>
                         </thead>
                         <?php 
@@ -228,9 +231,9 @@ $static=conexion()->prepare('select * from alumnos order by cedula asc');
                         <tfoot>
                           <th>C.I</th>
                           <th>Nombre</th>
-                          <th>Primer lapto</th>
-                          <th>segundo lapto</th>
-                          <th>tercero lapto</th>
+                          <th>Primer Lapso</th>
+                          <th>Segundo Lapso</th>
+                          <th>Tercer Lapso</th>
                           <th>Nota Final</th>
                         </tfoot>
                       </table>
